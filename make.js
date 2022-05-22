@@ -18,7 +18,7 @@ function start(){
     log(q)
     makeShowPan();
   }else{
-    makeMakePan("1947","918578069916","Your message here... Kokko")
+    makeMakePan("","918578069916","Your message here... Kokko")
   }
 }
 
@@ -79,7 +79,7 @@ function makeShowPan(){
       <div class="msgBx">
         <pre id="msgBx"></pre>
       </div>
-      <button onclick='makeMakePan("1947","918578069916","Your message here... Kokko")'>Create Message</button>
+      <button onclick='makeMakePan("","918578069916","Your message here... Kokko")'>Create Message</button>
     </div>
   </div>`;
   log("ca")
