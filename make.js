@@ -66,11 +66,6 @@ function makeMakePan(pass="",num="",place="Your msg here..."){
         <button id="cl" onclick="copyLnk()">Copy Link</button>
       </div>
     </div>
-
-    <div class="fr">
-      <p>Send to:</p>
-      <div class="btn"><input type="tel" placeholder="Whatsapp No." id="wano" value="${num}"><button onclick="dirSend()">Send</button></div>
-    </div>
   </div>`;
 
   document.body.innerHTML=html;
