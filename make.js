@@ -47,7 +47,7 @@ function copyLnk(){
 
 function dirSend(){
   makeLnk();
-  window.open(`https://wa.me/${op("#wano").value}?text=${link}`);
+  window.open(encodeURI(`https://wa.me/${op("#wano").value}?text=${link}`));
 } 
 
 function makeMakePan(pass="",num="",place="Your msg here..."){
@@ -89,4 +89,5 @@ function makeShowPan(){
   </div>`;
   log("ca")
   document.body.innerHTML=html;
+  op("#pin").focus();
 }
