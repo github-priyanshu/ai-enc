@@ -1,5 +1,5 @@
 var link="";
-var q=location.search;
+var q=location.search,p="";
 
 document.addEventListener("click",s);
 var sn=0;
@@ -26,8 +26,11 @@ function checkP(e){
   var decIt=decrypt(q);
   decIt=decIt.split("~~~");
 
+  p=e.value;
+
   if(e.value==decIt[1]){
     e.remove();
+    op(".msgBx").classList.add("active")
     op("#msgBx").innerHTML=decIt[0];
   }
 }
@@ -78,11 +81,15 @@ function makeShowPan(){
       <input type="number" oninput="checkP(this)" id="pin" placeholder="PIN" style="text-align: center;">
       <div class="msgBx">
         <pre id="msgBx"></pre>
+        <button onclick='makeSpecial()'>Create Message</button>
       </div>
-      <button onclick='makeMakePan("","918578069916","Your message here... Kokko")'>Create Message</button>
     </div>
   </div>`;
   log("ca")
   document.body.innerHTML=html;
   op("#pin").focus();
+}
+
+function makeSpecial() {
+  makeMakePan(p,"918578069916","Your message here... Kokko")
 }

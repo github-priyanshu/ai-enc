@@ -74,3 +74,9 @@ button:active,
 input:active{
   background: #222;
 }
+.msgBx{
+  display: none;
+}
+.msgBx.active{
+  display: block;
+}
