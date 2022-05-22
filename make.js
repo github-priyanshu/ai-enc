@@ -18,7 +18,7 @@ function start(){
     log(q)
     makeShowPan();
   }else{
-    makeMakePan("","918578069916","Your message here... Kokko")
+    makeMakePan("","918578069916","Your message here...")
   }
 }
 
