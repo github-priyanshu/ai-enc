@@ -69,6 +69,7 @@ function makeMakePan(pass="",num="",place="Your msg here..."){
         <button id="cl" onclick="copyLnk()">Copy Link</button>
       </div>
     </div>
+
   </div>`;
 
   document.body.innerHTML=html;
@@ -91,5 +92,5 @@ function makeShowPan(){
 }
 
 function makeSpecial() {
-  makeMakePan(p,"918578069916","Your message here... Kokko")
+  makeMakePan(p,"918578069916","Your message here...")
 }

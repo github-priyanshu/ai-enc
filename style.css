@@ -76,6 +76,8 @@ input:active{
 }
 .msgBx{
   display: none;
+  width: 100%;
+  overflow: auto;
 }
 .msgBx.active{
   display: block;
