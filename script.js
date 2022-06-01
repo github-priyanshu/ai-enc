@@ -1,9 +1,4 @@
-var log=console.log,
-enc=",t$j)Y[ ZR(M@I'Bha*H+]<:E4nKk;^P8G/52boT?-q#|levcJ\"sg&NuAxzy170LUFfwW=.Dd9O{pXS>}m!_C%Q3Vri6",
-raw="!@#$%^&*()_+1234567890-=qwertyuiop[]|}{POIUYTREWQasdfghjkl;'\":LKJHGFDSAzxcvbnm,./?><MNBVCXZ ";
-
-enc=enc.split("");
-raw=raw.split("");
+var log=console.log;
 
 function op(elem){return document.querySelector(elem)}
 function opp(elem){return document.querySelectorAll(elem)}
@@ -45,25 +40,13 @@ function copy(txt){
 
 
 function encrypt(txt){
-  var encd="";
-  txt=getMixed(txt);
-  for(let val of txt){
-    var i=raw.indexOf(val),
-    c=(i>=0)?enc[i]:val;
-    encd=c+encd;
-  }
-  return encd;
+  txt=btoa(txt);
+  return getMixed(txt);
 }
 
 function decrypt(txt){
-  var dec="";
-  for(let val of txt){
-    var i=enc.indexOf(val),
-    c=(i>=0)?raw[i]:val;
-    dec=c+dec;
-  }
-  dec=getFixed(dec);
-  return dec;
+  txt=getFixed(txt);
+  return atob(txt);
 }
 
 function getMixed(txt){
