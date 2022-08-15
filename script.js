@@ -40,13 +40,13 @@ function copy(txt){
 
 
 function encrypt(txt){
-  txt=btoa(txt);
+  txt=btoa(txt).replace("+",'00');
   return getMixed(txt);
 }
 
 function decrypt(txt){
   txt=getFixed(txt);
-  return atob(txt);
+  return atob(txt.replace("00",'+'));
 }
 
 function getMixed(txt){

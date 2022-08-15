@@ -48,9 +48,9 @@ function copyLnk(){
   copy(link);
 }
 
-function dirSend(){
+function dirSend(num){
   makeLnk();
-  window.open(encodeURI(`https://wa.me/${op("#wano").value}?text=${link}`));
+  window.open(encodeURI(`https://wa.me/${num}?text=${link}`));
 } 
 
 function makeMakePan(pass="",num="",place="Your msg here..."){
@@ -67,6 +67,11 @@ function makeMakePan(pass="",num="",place="Your msg here..."){
     <div class="fr">
       <div class="btn">
         <button id="cl" onclick="copyLnk()">Copy Link</button>
+      </div>
+
+      <div class="btn">
+        <button id="cl" onclick="dirSend('919835631564')">to Kismis</button>
+        <button id="cl" onclick="dirSend('918578069916')">to Kaju</button>
       </div>
     </div>
 
